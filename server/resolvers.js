@@ -32,7 +32,7 @@ const Subscription = {
   messageAdded: {
     subscribe: (_root, _args, { userId }) => {
       requireAuth(userId);
-      pubSub.asyncIterator(MESSAGE_ADDED);
+      return pubSub.asyncIterator(MESSAGE_ADDED);
     }
   }
 };
